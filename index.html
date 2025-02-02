@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be My Valentine?</title>
+    <title>Nisha, Will You Be My Valentine?</title>
     <style>
         body {
             text-align: center;
@@ -18,6 +18,11 @@
         h1 {
             font-size: 2.5rem;
             color: red;
+        }
+        .signature {
+            font-size: 1rem;
+            margin-top: 20px;
+            color: darkred;
         }
         .buttons {
             margin-top: 20px;
@@ -39,18 +44,50 @@
             color: red;
             position: absolute;
         }
+        .love-letter {
+            display: none;
+            font-size: 1.2rem;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
+            max-width: 400px;
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
     </style>
 </head>
 <body>
-    <h1>Will you be my Valentine? 💖</h1>
+    <h1>Nisha, Will You Be My Valentine? 💖</h1>
+    <p class="signature">Made with ❤️ by Kushal</p>
     <div class="buttons">
-        <button class="yes" onclick="sayYes()">YES 😍</button>
+        <button class="yes" onclick="showLoveLetter()">YES 😍</button>
         <button class="no" onmouseover="moveNo()">NO 😢</button>
     </div>
 
+    <div id="loveLetter" class="love-letter">
+        <h2>💌 A Love Letter for My Nisha 💌</h2>
+        <p><strong>07 Dec 2020</strong> - The day our story began, a journey of love, laughter, and unbreakable bonds. ❤️</p>
+        <p>
+            Sanu, maile socheko thyena ki ma timi sanga yasto dherai attatched hunechu. 
+            Dherai ups and downs aayo, maile dherai galti haru garey, tara malai thaha cha maile 
+            timi sanga jati maya gareko xu sabai pure gareko xu . 
+        </p>
+        <p>
+            Aba hera, yo moment chai khas banau, kina bhane maile <strong>Timilai dherai dherai maya garxu!</strong> 
+            Sorry hai sanu halka coding garera try gareko aali dherai nai time lagyo. Hami sadhai khusi ra sangai hunu parxa hai sanu... because it's **us**, forever. 🥰
+        </p>
+        <h3>❤️ I love you, Dear! ❤️</h3>
+    </div>
+
     <script>
-        function sayYes() {
-            document.body.innerHTML = "<h1>Yay! You are my Valentine! ❤️🎉</h1><img src='https://media.giphy.com/media/3o7TKsQ2X0P3pPO0Ra/giphy.gif' alt='Love' width='300px'>";
+        function showLoveLetter() {
+            document.getElementById("loveLetter").style.display = "block";
         }
         
         function moveNo() {
